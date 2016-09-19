@@ -524,3 +524,27 @@ toolbarbutton {
   padding: 3px;
 }
 
+/* Restyle icons; look in /usr/share/icons/Adwaita for names */
+
+#back-button .toolbarbutton-icon {
+  list-style-image: url("moz-icon://stock/go-previous-symbolic?size=menu") !important;
+  -moz-image-region: auto;
+    padding: 6px;
+}
+
+#forward-button .toolbarbutton-icon {
+  list-style-image: url("moz-icon://stock/go-next-symbolic?size=menu") !important;
+  -moz-image-region: auto;
+}
+
+#PanelUI-menu-button {
+  list-style-image: url("moz-icon://stock/open-menu-symbolic?size=menu") !important;
+  -moz-image-region: auto;
+}
+
+/*
+#downloads-button {
+  list-style-image: url("moz-icon://stock/folder-download-symbolic?size=menu") !important;
+  -moz-image-region: auto;
+}
+*/

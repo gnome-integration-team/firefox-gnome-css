@@ -221,6 +221,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
 }
 
 /* Use smaller back button icon */
+/*
 #back-button {
   -moz-image-region: rect(0, 54px, 18px, 36px);
 }
@@ -230,6 +231,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
     -moz-image-region: rect(0, 108px, 36px, 72px);
   }
 }
+*/
 
 .tab-background {
   visibility: hidden;
@@ -239,7 +241,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
   background: currentColor;
-  opacity: 0.2 !important;
+  opacity: 0 !important;
 }
 
 .tabbrowser-arrowscrollbox > .scrollbutton-down,
@@ -311,7 +313,9 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
 :root[devtoolstheme="dark"] .findbar-closebutton:not(:hover),
 :root[devtoolstheme="dark"] #sidebar-header > .close-icon:not(:hover),
 .tab-close-button[selected]:not(:hover) {
+/*
   background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 80, 16, 64);
+  */
 }
 
 /* The menubar and tabs toolbar should match the devedition theme */
@@ -333,6 +337,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
 }
 
 /* Square back and forward buttons */
+/*
 #back-button > .toolbarbutton-icon,
 #forward-button > .toolbarbutton-icon {
   margin: 0;
@@ -345,12 +350,16 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
 #forward-button > .toolbarbutton-icon {
   border-inline-start: none;
 }
+*/
 
 /* Override a box shadow for disabled back button */
+/*
 #main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon {
   box-shadow: none !important;
 }
+*/
 
+/*
 #back-button:hover:not([disabled="true"]) > .toolbarbutton-icon,
 #forward-button:hover:not([disabled="true"]) > .toolbarbutton-icon {
   background: var(--chrome-nav-buttons-hover-background) !important;
@@ -359,6 +368,7 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
 #back-button > .toolbarbutton-icon {
   border-radius: 2px 0 0 2px !important;
 }
+*/
 
 .urlbar-history-dropmarker {
   -moz-appearance: none;
@@ -393,3 +403,113 @@ window:not([chromehidden~="toolbar"]) #urlbar-wrapper {
      urlbar. */
   margin-inline-start: 11px;
 }
+
+
+/* GNOME stuff */
+
+toolbar {
+  padding: 3px;
+  border: 1px solid #999;
+  border-width: 1px 0;
+}
+
+toolbarbutton {
+}
+
+.toolbarbutton-icon {
+}
+
+#back-button {
+  /*
+  margin: 0;
+  border: 1px solid var(--chrome-nav-bar-controls-border-color);
+  padding: 2px 5px;
+  background: var(--chrome-nav-buttons-background);
+  box-shadow: none !important;
+    border-inline-start: none;
+    box-shadow: none !important;
+border-radius: 0 !important;
+  */
+}
+
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon {
+  margin: 0;
+  border: 1px solid var(--chrome-nav-bar-controls-border-color);
+  padding: 2px 5px;
+  background: var(--chrome-nav-buttons-background);
+  box-shadow: none !important;
+  border-radius: 2px;
+}
+
+#forward-button > .toolbarbutton-icon {
+  /*
+  border-inline-start: none;
+  */
+}
+
+
+/* Override a box shadow for disabled back button */
+#main-window:not([customizing]) #back-button[disabled] > .toolbarbutton-icon {
+  /*
+  box-shadow: none !important;
+  */
+}
+
+#TabsToolbar, .tabbrowser-tabs, .tabs-newtab-button, .tabbrowser-tabs .scrollbox-innerbox {
+  background: #cececc;
+}
+
+.tabbrowser-tab {
+    padding: 0.5ex 0.5ex;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tabbrowser-tab:not([pinned=true]) .tab-content > * {
+  display: inline;
+}
+
+.tabbrowser-tab:not([selected=true]) {
+   background: #cececc;
+    color: #999;
+}
+
+.tabbrowser-tab:not([selected=true]):hover {
+  color: #777;
+      box-shadow: 0 -2px 0 #999 inset !important;
+    border: 1px solid #bbbbb8;
+  border-width: 0 1px;
+  padding-left: calc(0.5ex - 1px);
+  padding-right: calc(0.5ex - 1px);
+}
+
+.tabbrowser-tab[selected=true] {
+    color: #000 !important;
+    background: #dbdbd9;
+    box-shadow: 0 -2px 0 #4a90d9 inset !important;
+    outline: 1px solid #bbbbb8;
+}
+
+.tabbrowser-tab[selected=true]:hover {
+  background: #ddd;
+}
+
+#navigator-toolbox {
+    -moz-box-direction: reverse;
+}
+
+.close-icon {
+  opacity: 0.5;
+  transition: all 1s;
+}
+
+.close-icon:hover {
+  opacity: 1;
+  background-color: #e9e9e9;
+  background-image: -moz-image-rect(url("chrome://global/skin/icons/close.svg"), 0, 16, 16, 0);
+  box-shadow: 0 0 0 1px #eee, 0 0 0 2px #999;
+  border-radius: 2px;
+  padding: 3px;
+}
+

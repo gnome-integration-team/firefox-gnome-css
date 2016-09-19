@@ -467,7 +467,18 @@ toolbarbutton {
 }
 
 .tabbrowser-tab:not([pinned=true]) .tab-content > * {
+  /*
   display: inline;
+  */
+}
+
+/* Turn off favicons for unpinned tabs */
+.tabbrowser-tab:not([pinned=true]) .tab-icon-image {
+  display: none;
+}
+
+.tabbrowser-tab:not([pinned=true]) .tab-close-button {
+  display: inline-block;
 }
 
 .tabbrowser-tab:not([selected=true]) {

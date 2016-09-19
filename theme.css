@@ -456,7 +456,7 @@ toolbarbutton {
   */
 }
 
-#TabsToolbar, .tabbrowser-tabs, .tabs-newtab-button, .tabbrowser-tabs .scrollbox-innerbox {
+#TabsToolbar, .tabbrowser-tabs, .tabs-newtab-button, .tabbrowser-tabs .tabbrowser-arrowscrollbox {
   background: #cececc;
 }
 

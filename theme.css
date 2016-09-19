@@ -426,9 +426,9 @@ toolbarbutton {
   padding: 2px 5px;
   background: var(--chrome-nav-buttons-background);
   box-shadow: none !important;
-    border-inline-start: none;
-    box-shadow: none !important;
-border-radius: 0 !important;
+  border-inline-start: none;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   */
 }
 
@@ -461,7 +461,7 @@ border-radius: 0 !important;
 }
 
 .tabbrowser-tab {
-    padding: 0.5ex 0.5ex;
+  padding: 0.5ex 0.5ex;
   font-weight: bold;
   text-align: center;
 }
@@ -471,24 +471,24 @@ border-radius: 0 !important;
 }
 
 .tabbrowser-tab:not([selected=true]) {
-   background: #cececc;
-    color: #999;
+  background: #cececc;
+  color: #999;
 }
 
 .tabbrowser-tab:not([selected=true]):hover {
   color: #777;
-      box-shadow: 0 -2px 0 #999 inset !important;
-    border: 1px solid #bbbbb8;
+  box-shadow: 0 -2px 0 #999 inset !important;
+  border: 1px solid #bbbbb8;
   border-width: 0 1px;
   padding-left: calc(0.5ex - 1px);
   padding-right: calc(0.5ex - 1px);
 }
 
 .tabbrowser-tab[selected=true] {
-    color: #000 !important;
-    background: #dbdbd9;
-    box-shadow: 0 -2px 0 #4a90d9 inset !important;
-    outline: 1px solid #bbbbb8;
+  color: #000 !important;
+  background: #dbdbd9;
+  box-shadow: 0 -2px 0 #4a90d9 inset !important;
+  outline: 1px solid #bbbbb8;
 }
 
 .tabbrowser-tab[selected=true]:hover {
@@ -496,7 +496,7 @@ border-radius: 0 !important;
 }
 
 #navigator-toolbox {
-    -moz-box-direction: reverse;
+  -moz-box-direction: reverse;
 }
 
 .close-icon {
